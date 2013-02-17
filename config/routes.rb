@@ -1,4 +1,15 @@
 Surgery::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  match '/:locale' => 'pages#main', :locale => /ru|uk/
+  scope "(:locale)", :locale => /ru|uk/ do
+    resources :pages
+  end
+
+  root :to => 'language#choose_one'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

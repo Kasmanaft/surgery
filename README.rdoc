@@ -5,6 +5,7 @@ argh
 argharghargh
 hey ho let's go
 one more
+and more
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
